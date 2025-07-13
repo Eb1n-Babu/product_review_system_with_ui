@@ -18,5 +18,6 @@ A RESTful API built with Django and Django REST Framework for managing products 
 ## API Endpoints
 See \`docs/API.md\` for detailed endpoint documentation.
 
-## 1234 - user name and password - 1234
-## @User1234 and @Password1234
+## user name an password
+## admin - 1234
+## user1 - @Pass1234
