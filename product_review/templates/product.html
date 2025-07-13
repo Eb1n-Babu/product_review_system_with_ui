@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Product Details - Product Review System{% endblock %}
+{% block content %}
+<section id="product-details"></section>
+<section id="admin-controls" style="display: none;">
+    <h3>Edit Product</h3>
+    <form id="edit-product-form">
+        {% csrf_token %}
+        <label for="edit-name">Name:</label>
+        <input type="text" id="edit-name" required>
+        <label for="edit-description">Description:</label>
+        <textarea id="edit-description" required></textarea>
+        <label for="edit-price">Price:</label>
+        <input type="number" id="edit-price" step="0.01" required>
+        <button type="submit">Update Product</button>
+        <button type="button" id="delete-product-btn">Delete Product</button>
+        <p id="edit-product-error" class="error"></p>
+    </form>
+</section>
+<section id="reviews-section">
+    <h3>Reviews</h3>
+    <div id="review-list"></div>
+    <h3>Submit a Review</h3>
+    <form id="review-form">
+        {% csrf_token %}
+        <label for="rating">Rating (1-5):</label>
+        <input type="number" id="rating" min="1" max="5" required>
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" required></textarea>
+        <button type="submit">Submit Review</button>
+        <p id="review-error" class="error"></p>
+    </form>
+</section>
+{% endblock %}

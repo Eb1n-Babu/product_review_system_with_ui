@@ -1,0 +1,95 @@
+/* static/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+h1, h2, h3 {
+    margin: 0 0 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+/* Specific styles for login form to reduce field size */
+#login-form {
+    max-width: 300px; /* Smaller width for login form */
+}
+#login-form input {
+    padding: 6px; /* Reduced padding for username and password fields */
+    font-size: 14px; /* Smaller font size */
+    width: 100%; /* Ensure fields fit within form */
+    box-sizing: border-box; /* Prevent padding from increasing width */
+}
+input, textarea, button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 14px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.error {
+    color: red;
+    font-size: 14px;
+}
+#product-list, #review-list {
+    display: grid;
+    gap: 15px;
+}
+.product-card, .review-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    form {
+        max-width: 100%;
+    }
+    #login-form input {
+        padding: 5px;
+        font-size: 13px;
+    }
+    button {
+        padding: 7px;
+        font-size: 13px;
+    }
+}

@@ -15,8 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 # product_review/urls.py
+# product_review/urls.py
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken.views import obtain_auth_token
 from products.views import ProductViewSet
@@ -33,5 +35,6 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls')),
     path('api/token/', obtain_auth_token, name='api_token'),
+    path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path('product/', TemplateView.as_view(template_name='product.html'), name='product'),
 ]
-
